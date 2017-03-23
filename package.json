@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/prefixdev666/x#readme",
   "dependencies": {
-    "http": "0.0.0"
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "mu2": "^0.5.21"
   }
 }

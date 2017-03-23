@@ -1,34 +1,44 @@
-/* Classes */
+/* required classes */
 const Router = require("./Router.js");
+const Settings = require("./Settings.js");
 
-/* Node modules */
+/* required node modules */
 const http = require("http");
 
-/* Settings */
-const port = 3000;
-const address = "127.0.0.1";
-
-/* Helpers */
+/* helpers */
 const router = new Router();
+const settings = new Settings();
 
+/* @-<Server *****************************************************************/
+/*****************************************************************************/
 class Server
 {
+  /* @@-<constructor *********************************************************/
+  /***************************************************************************/
   constructor()
   {}
 
-  init()
-  { 
+  /* @@-<start ***************************************************************/
+  /***************************************************************************/
+  start()
+  {
     let server = http.createServer(function(request, response)
     {
-      response.writeHead(200, {"Content-Type" : "text/html"});
-      
+      /* headers */
+      response.writeHead(200, {"Content-Type" : "text/html"});  
+
+      /* send request url to the router and get correct content in return */
       this.content = router.output(request.url);
 
+      /* response */
       response.end(this.content);
     });
 
-    server.listen(port, address);
+    server.listen(settings.port, settings.address);
+
+    return true;
   }
 }
 
+/* export */
 module.exports = Server;

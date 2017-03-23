@@ -1,12 +1,10 @@
 "use strict";
 
-/* Classes */
+/* classes */
 const Server = require("./app/classes/Server.js");
 
-/* Settings */
+/* helpers */
+const server = new Server();
 
-/* Helpers */
-let server = new Server();
-
-/* Server - initialization */
-server.init();
+/* start the server */
+server.start();
