@@ -8,6 +8,11 @@ class Controller
   {
     this.a = "b";
   }
+
+  render(f)
+  {
+    f.renderDefault();
+  }
 }
 
 /* export */

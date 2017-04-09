@@ -15,11 +15,16 @@ class IndexController extends Controller
   /* @@-<constructor *********************************************************/
   /***************************************************************************/
   constructor()
-  {console.log(super().a);
+  { 
+    var f = super();
+    
     this.classId = this.constructor.name.split("Controller")[0].toLowerCase();
+    
     if(this.classId === "index"){ this.classId = ""; }
 
-    this.renderDefault();
+    // Object.getOwnPropertyNames(Object.getPrototypeOf(this)) - get all calss methods
+    
+    f.render(this);
   }
 
   renderDefault()
