@@ -15,7 +15,7 @@ class Router
   navigate(request)
   {
     if(request === "/") // index
-    {
+    {console.log(cache);
       return cache.html["index"];
     }
   }

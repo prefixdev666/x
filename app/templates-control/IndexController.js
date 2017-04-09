@@ -24,7 +24,7 @@ class IndexController extends Controller
 
     // Object.getOwnPropertyNames(Object.getPrototypeOf(this)) - get all calss methods
     
-    f.render(this);
+    return { html : this.renderDefault() };
   }
 
   renderDefault()
@@ -40,9 +40,9 @@ class IndexController extends Controller
     const compiledTemplate = mu.compileAndRender(settings.root + "/app/templates-view/" + this.classId + "/" + methodId + ".mustache", data);
 
     /* event - data - compiledTemplate ***************************************/
-    compiledTemplate.on("data", function(data)
+    return compiledTemplate.on("data", function(data)
     {
-      console.log(data.toString());
+      return data.toString();
     });    
   }
 }

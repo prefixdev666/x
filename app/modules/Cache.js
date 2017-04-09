@@ -19,9 +19,9 @@ let cache =
     let content = {};
 
     const IndexController = require("../templates-control/IndexController.js");
-    const indexController = new IndexController;
+    const indexController = new IndexController();
 
-    content["index"] = indexController;
+    content["index"] = indexController.html;
 
     this.html = content;
   }

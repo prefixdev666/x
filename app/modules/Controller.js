@@ -6,12 +6,11 @@ class Controller
   /***************************************************************************/
   constructor()
   {
-    this.a = "b";
   }
 
   render(f)
   {
-    f.renderDefault();
+    return f.renderDefault();
   }
 }
 
