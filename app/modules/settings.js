@@ -1,4 +1,4 @@
-/* required node modules */
+/* node modules */
 const path = require("path");
 
 /* settings ******************************************************************/

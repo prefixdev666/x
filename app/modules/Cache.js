@@ -1,38 +1,31 @@
-/* required node modules */
+/* node modules */
 const fs = require("fs");
 
-/* required classes */
+/* classes */
 const Library = require("./Library.js");
 
 /* helpers */
 const library = new Library();
 const settings = require("./settings.js");
 
-/* @-<Cache ******************************************************************/
+/* cache *********************************************************************/
 /*****************************************************************************/
-class Cache
+let cache =
 {
-  /* @@-<constructor *********************************************************/
-  /***************************************************************************/
-  constructor()
-  {
-    this.html = this.build();
-  }
-
   /* @@-<build ***************************************************************/
   /***************************************************************************/
-  build()
+  build : function()
   {
     let content = {};
-    
+
     const IndexController = require("../templates-control/IndexController.js");
     const indexController = new IndexController;
 
-    content.index = indexController.renderDefault();
+    content["index"] = indexController;
 
-    return content;
+    this.html = content;
   }
 }
 
 /* export */
-module.exports = Cache;
+module.exports = cache;

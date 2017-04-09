@@ -1,8 +1,8 @@
-/* required classes */
-const Router = require("./Router.js");
-
-/* required node modules */
+/* node modules */
 const http = require("http");
+
+/* classes */
+const Router = require("./Router.js");
 
 /* helpers */
 const router = new Router();

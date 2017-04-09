@@ -1,8 +1,5 @@
-/* required classes */
-const Cache = require("./Cache.js");
-
 /* helpers */
-const cache = new Cache();
+const cache = require("./cache.js");
 
 /* @-<Router *****************************************************************/
 /*****************************************************************************/

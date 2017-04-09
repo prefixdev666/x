@@ -1,4 +1,4 @@
-/* required node modules */
+/* node modules */
 const fs = require("fs");
 
 /* @-<Library ****************************************************************/

@@ -1,1 +1,4 @@
-Hello {{$test}}
+{
+  "hello" : "abcd",
+  "one" : "two"
+}
